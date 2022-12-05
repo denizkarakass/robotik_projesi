@@ -1,6 +1,6 @@
-İHA5 = {
-    "name": "İHA-1",
-    "x": 60,  # İHA-1 x:[1], y:[2], z:[3] konumunda
+IHA5 = {
+    "name": "IHA-1",
+    "x": 60,  # IHA-1 x:[1], y:[2], z:[3] konumunda
     "y": 50,
     "z": 30,
     # Engelin x,y,z eksenlerine olan uzaklık mesafesi ROS'dan gelen veri.

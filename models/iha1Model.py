@@ -1,7 +1,7 @@
-İHA1 = { 
-    "name": "İHA-1",
+IHA1 = { 
+    "name": "IHA-1",
     # Engelin x,y,z eksenlerine olan uzaklık mesafesi ROS'dan gelen veri.
-    "x": 20,  # İHA-1 x:[1], y:[2], z:[3] konumunda
+    "x": 20,  # IHA-1 x:[1], y:[2], z:[3] konumunda
     "y": 50,
     "z": 40,
     # Eğer ortada engel yoksa ROS'dan 0 değeri dönecek ve bunu kullanıcaz.

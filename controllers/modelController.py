@@ -1,5 +1,5 @@
-# İHA boyutlarını 2*2*2 şeklinde alıyorum.
-# Engel, İHA, İKA konumları ROS aracılığıyla sensörlerden alınacak.
+# IHA boyutlarını 2*2*2 şeklinde alıyorum.
+# Engel, IHA, IKA konumları ROS aracılığıyla sensörlerden alınacak.
 # ROS'dan MongoDB veritabanına aktarılıp güncel veriler buraya çekilebilir.
 
 from ..models import iha1Model
@@ -13,5 +13,5 @@ from ..models import ika1Model
 from ..models import ika2Model
 
 
-İKHAs = [iha1Model, iha2Model, iha3Model, iha4Model, iha5Model, iha6Model, ika1Model, ika2Model]
+IKHAs = [iha1Model, iha2Model, iha3Model, iha4Model, iha5Model, iha6Model, ika1Model, ika2Model]
 
