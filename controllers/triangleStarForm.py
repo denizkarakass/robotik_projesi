@@ -20,9 +20,12 @@ IHAs[7]["z"] = o + 10
 IHAs[8]["x"] = o + 10
 IHAs[8]["z"] = o - 10
 
-IKAs[0]["x"] = 30
-IKAs[1]["x"] = 30
-IKAs[2]["x"] = 30
+IKAs[0]["x"] = o 
+IKAs[0]["z"] = o + 5
+IKAs[1]["x"] = o + 5
+IKAs[1]["z"] = o 
+IKAs[2]["x"] = o - 5
+IKAs[2]["z"] = o 
 
 
 
