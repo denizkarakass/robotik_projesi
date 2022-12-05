@@ -1,0 +1,29 @@
+# 9 İHA ve 3 İKA ile oluşturulan formasyon
+# üstte yıldız şekli alıp altta üçgen şekli alıyor
+
+from modelController import IHAs
+from modelController import IKAs
+
+o = 30
+
+IHAs[0]["x"] = o
+IHAs[1]["x"] = o + 10
+IHAs[2]["x"] = o - 10 
+IHAs[3]["z"] = o + 10
+IHAs[4]["z"] = o - 10
+IHAs[5]["x"] = o + 10
+IHAs[5]["z"] = o + 10
+IHAs[6]["x"] = o - 10
+IHAs[6]["z"] = o - 10
+IHAs[7]["x"] = o - 10
+IHAs[7]["z"] = o + 10
+IHAs[8]["x"] = o + 10
+IHAs[8]["z"] = o - 10
+
+IKAs[0]["x"] = 30
+IKAs[1]["x"] = 30
+IKAs[2]["x"] = 30
+
+
+
+
