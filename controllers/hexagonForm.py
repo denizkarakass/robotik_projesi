@@ -1,10 +1,5 @@
 from modelController import IKHAs
-from modelController import iha1Model
-from modelController import iha2Model
-from modelController import iha3Model
-from modelController import iha4Model
-from modelController import iha5Model
-from modelController import iha6Model
+
 
 IKHAs[0]["X"] = 10
 IKHAs[1]["X"] = 10
