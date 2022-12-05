@@ -13,5 +13,6 @@ from ..models import ika1Model
 from ..models import ika2Model
 
 
-IKHAs = [iha1Model, iha2Model, iha3Model, iha4Model, iha5Model, iha6Model, ika1Model, ika2Model]
+IKHAs = [ ika1Model, ika2Model]
+IHAs= [iha1Model, iha2Model, iha3Model, iha4Model, iha5Model, iha6Model]
 
