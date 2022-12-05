@@ -13,13 +13,8 @@ from ..models import iha8Model
 
 from ..models import ika1Model
 from ..models import ika2Model
+from ..models import ika3Model
 
-
-<<<<<<< HEAD
 IHAs = [iha1Model, iha2Model, iha3Model, iha4Model, iha5Model, iha6Model, iha7Model, iha8Model]
-IKAs = [ika1Model,ika2Model]
-=======
-IKHAs = [ ika1Model, ika2Model]
-IHAs= [iha1Model, iha2Model, iha3Model, iha4Model, iha5Model, iha6Model]
+IKAs = [ika1Model,ika2Model, ika3Model]
 
->>>>>>> refs/remotes/origin/main

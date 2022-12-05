@@ -1,6 +1,6 @@
-IKA2 = {
+IKA3 = {
     "name": "IHA-1",
-    "x": 40,  # IHA-1 x:[1], y:[2], z:[3] konumunda
+    "x": 50,  # IHA-1 x:[1], y:[2], z:[3] konumunda
     "y": 50,
     "z": 30,
     # Engelin x,y,z eksenlerine olan uzaklık mesafesi ROS'dan gelen veri.

@@ -1,4 +1,5 @@
 from modelController import IHAs
+from modelController import IKAs
 
 o = 30
 
@@ -8,8 +9,9 @@ IHAs[2]["x"] = o - 10
 IHAs[3]["x"] = o
 IHAs[4]["x"] = 30
 IHAs[5]["x"] = 30
-
 IHAs[6]["x"] = 30
 IHAs[7]["x"] = 30
+
+IKAs[0]["x"] = 30
 
 
