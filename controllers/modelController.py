@@ -1,7 +1,7 @@
 import pymongo
 myclient = pymongo.MongoClient(
     "mongodb+srv://deniz:727302dk@cluster0.zuwnt7e.mongodb.net/?retryWrites=true&w=majority")
-mydb = myclient["test"]
+mydb = myclient["robotik"]
 mycol = mydb["ihas"]
 mycol2 = mydb["ikas"]
 
