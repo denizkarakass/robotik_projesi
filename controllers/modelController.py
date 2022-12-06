@@ -1,20 +1,25 @@
-# IHA boyutlarını 2*2*2 şeklinde alıyorum.
-# Engel, IHA, IKA konumları ROS aracılığıyla sensörlerden alınacak.
-# ROS'dan MongoDB veritabanına aktarılıp güncel veriler buraya çekilebilir.
+import pymongo
+myclient = pymongo.MongoClient(
+    "mongodb+srv://deniz:727302dk@cluster0.zuwnt7e.mongodb.net/?retryWrites=true&w=majority")
+mydb = myclient["test"]
+mycol = mydb["ihas"]
+mycol2 = mydb["ikas"]
 
-from ..models import iha1Model
-from ..models import iha2Model
-from ..models import iha3Model
-from ..models import iha4Model
-from ..models import iha5Model
-from ..models import iha6Model
-from ..models import iha7Model
-from ..models import iha8Model
+IHA1 = mycol.find_one({"name": "İHA1"})
+IHA2 = mycol.find_one({"name": "İHA2"})
+IHA3 = mycol.find_one({"name": "İHA3"})
+IHA4 = mycol.find_one({"name": "İHA4"})
+IHA5 = mycol.find_one({"name": "İHA5"})
+IHA6 = mycol.find_one({"name": "İHA6"})
+IHA7 = mycol.find_one({"name": "İHA7"})
+IHA8 = mycol.find_one({"name": "İHA8"})
+IHA9 = mycol.find_one({"name": "İHA9"})
 
-from ..models import ika1Model
-from ..models import ika2Model
-from ..models import ika3Model
+IKA1 = mycol2.find_one({"name": "İKA1"})
+IKA2 = mycol2.find_one({"name": "İKA2"})
+IKA3 = mycol2.find_one({"name": "İKA3"})
 
-IHAs = [iha1Model, iha2Model, iha3Model, iha4Model, iha5Model, iha6Model, iha7Model, iha8Model]
-IKAs = [ika1Model,ika2Model, ika3Model]
 
+
+IHAs = [IHA1, IHA2, IHA3, IHA4, IHA5, IHA6, IHA7, IHA8, IHA9]
+IKAs = [IKA1, IKA2, IKA3]
