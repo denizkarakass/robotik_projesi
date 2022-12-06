@@ -32,4 +32,4 @@ IKAs[0]["x"] = o + 25
 #IKAların y konumu
 IKAs[0]["y"] = 0
 #IKAların z konumu
-IKAs[0]["z"] = o + 98s
+IKAs[0]["z"] = o + 98
