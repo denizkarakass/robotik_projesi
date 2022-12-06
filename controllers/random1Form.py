@@ -1,5 +1,7 @@
 from modelController import IHAs
 from modelController import IKAs
+#IKA:1
+#IHA:7
 o = 20
 #IHAların x konumu
 IHAs[0]["x"] = o + 10
