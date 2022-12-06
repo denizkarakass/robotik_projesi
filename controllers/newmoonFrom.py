@@ -1,6 +1,6 @@
 from modelController import IHAs
 from modelController import IKAs
-
+   
 #IHAların x konumu
 IHAs[0]["x"] = 100
 IHAs[1]["x"] = 50
