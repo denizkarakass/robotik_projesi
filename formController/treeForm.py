@@ -1,5 +1,6 @@
 from data import IHAs
 from data import IKAs
+def treeForm(): 
 #IHA:5
 #IKA:2
 #IKAlar gövde aşşağasında

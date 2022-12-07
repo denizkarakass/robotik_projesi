@@ -1,5 +1,6 @@
 from data import IHAs
 from data import IKAs
+def pentagonForm():
 #IHA:4
 #IKA:1
 #IHAların x konumu

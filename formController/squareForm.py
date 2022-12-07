@@ -1,5 +1,6 @@
 from data import IHAs
 from data import IKAs
+def squareForm():
 #IHA:8
 #IKA:3
 #IHAların x konumu
