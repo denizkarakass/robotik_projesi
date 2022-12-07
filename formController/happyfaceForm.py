@@ -1,5 +1,6 @@
-from modelController import IHAs
-from modelController import IKAs
+from data import IHAs
+from data import IKAs
+
 #IKAlar burnu
 #IHAlar yüzün geri kalanını
 #IHAların x konumu
