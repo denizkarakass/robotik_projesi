@@ -1,5 +1,4 @@
 from data import IHAs
-from data import IKAs
 
 
 for i in range(0, IHAs.len()):

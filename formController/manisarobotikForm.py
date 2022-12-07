@@ -4,7 +4,7 @@ from data import IKAs
 #IHA:6
 o = 20
 #IHAların x konumu
-IHAs[0]["x"] = o + 68
+IHAs[0]["x"] += o + 68
 IHAs[1]["x"] = o + 101
 IHAs[2]["x"] = o + 36
 IHAs[3]["x"] = o + 18
