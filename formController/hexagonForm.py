@@ -1,5 +1,6 @@
 from data import IHAs
 from data import IKAs
+def hexagonForm():
 #IHA:6
 #IKA:3
 ref = 0

@@ -1,5 +1,6 @@
 from data import IHAs
 from data import IKAs
+def happyfaceForm():
 #IKA:3
 #IHA:10
 #IKAlar burnu
