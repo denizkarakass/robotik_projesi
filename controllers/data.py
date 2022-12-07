@@ -1,4 +1,4 @@
-import pymongo
+
 myclient = pymongo.MongoClient(
     "mongodb+srv://deniz:727302dk@cluster0.zuwnt7e.mongodb.net/?retryWrites=true&w=majority")
 mydb = myclient["test"]
@@ -7,7 +7,7 @@ mycol2 = mydb["ikas"]
 
 IHA1 = mycol.find_one({"name": "İHA1"})
 IHA2 = mycol.find_one({"name": "İHA2"})
-IHA3 = mycol.find_one({"name": "İHA3"}) 
+IHA3 = mycol.find_one({"name": "İHA3"})
 IHA4 = mycol.find_one({"name": "İHA4"})
 IHA5 = mycol.find_one({"name": "İHA5"})
 IHA6 = mycol.find_one({"name": "İHA6"})

@@ -4,7 +4,8 @@ from data import IKAs
 
 for i in range(0, IHAs.len()):
     if (IHAs[i]["status"] == "1"):
-        while ((IHAs[i]["e_x"] < 10) or (IHAs[i]["e-y"] < 10) or (IHAs[i]["e-ny"] < 10)):
+        while ((IHAs[i]["e_x"] < 10) or (IHAs[i]["e_py"] < 10) or (IHAs[i]["e_ny"] < 10)
+               or (IHAs[i]["e_pz"] < 10) or (IHAs[i]["e_nz"] < 10)):
             # yukarı çıkma
             if (IHAs[i]["e_y"] > 10):
               IHAs[i]["y"] += 10
