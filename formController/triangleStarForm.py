@@ -1,8 +1,8 @@
 # 9 İHA ve 3 İKA ile oluşturulan formasyon
 # üstte yıldız şekli alıp altta üçgen şekli alıyor
 
-from modelController import IHAs
-from modelController import IKAs
+from data import IKAs
+from data import IHAs
 
 o = 30
 

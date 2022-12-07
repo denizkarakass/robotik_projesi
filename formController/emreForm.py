@@ -1,6 +1,6 @@
-from modelController import IHAs
-from modelController import IKAs
-#IKA:1
+from data import IHAs
+from data import IKAs
+#IKA:2
 #IHA:8
 o = 50
 #IHAların x konumu
@@ -32,7 +32,10 @@ IHAs[6]["z"] = o + 150
 IHAs[7]["z"] = o + 190
 #IKAların x konumu
 IKAs[0]["x"] = o + 158
+IKAs[1]["x"] = o + 158
 #IKAların y konumu
 IKAs[0]["y"] = 0
+IKAs[1]["y"] = 0
 #IKAların z konumu
 IKAs[0]["z"] = o + 53
+IKAs[1]["z"] = o + 53

@@ -1,5 +1,5 @@
-from ..modelController import IHAs
-from ..modelController import IKAs
+from data import IHAs
+from data import IKAs
 #IKA masa sağ tarafı
 #IHA masa sol tarafı,sandalye
 o = 20
