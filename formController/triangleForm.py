@@ -1,5 +1,6 @@
 from data import IHAs
 from data import IKAs
+def triangleForm():
 o = 10
 #IHA:5
 #IKA:1

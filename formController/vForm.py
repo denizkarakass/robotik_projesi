@@ -1,5 +1,6 @@
 from data import IHAs
 from data import IKAs
+def vForm():
 #IHA:5
 #IKA:3
 o = 10
