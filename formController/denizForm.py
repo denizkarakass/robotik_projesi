@@ -22,7 +22,7 @@ IHAs[5]["y"] =+ 100
 IHAs[6]["y"] =+ 100
 IHAs[7]["y"] =+ 100
 #IHAların z konumu
-IHAs[0]["z"] =+ o  + 86
+IHAs[0]["z"] =+ o + 86
 IHAs[1]["z"] =+ o + 36
 IHAs[2]["z"] =+ o + 59
 IHAs[3]["z"] =+ o + 10
