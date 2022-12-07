@@ -1,7 +1,7 @@
 from data import IHAs
 from data import IKAs
 #IKA:3
-#IHA:10
+#IHA:10 
 #IKAlar burnu
 #IHAlar yüzün geri kalanını
 #IHAların x konumu
