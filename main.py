@@ -52,6 +52,15 @@ if(aktifIHA == 6 and aktifIKA == 2):
 if(aktifIHA == 6 and aktifIKA == 1):
     from formController.manisarobotikForm import manisarobotikForm  
 
+if(aktifIHA == 5 and aktifIKA == 2):
+    from formController.treeForm import treeForm      
+
+if(aktifIHA == 5 and aktifIKA == 1):
+    from formController.triangleForm import triangleForm 
+
+if(aktifIHA == 5 and aktifIKA == 3):
+    from formController.vForm import vForm 
+    
 if(aktifIHA == 4 and aktifIKA == 1):
     from formController.pentagonForm import pentagonForm  
 
