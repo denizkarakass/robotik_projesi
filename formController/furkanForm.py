@@ -3,7 +3,7 @@ from data import IKAs
 def furkanForm():
 #IKA:1
 #IHA:7
-o = 20
+o = 20 
 #IHAların x konumu
 IHAs[0]["x"] =+ o + 10
 IHAs[1]["x"] =+ o + 29
