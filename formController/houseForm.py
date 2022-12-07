@@ -1,5 +1,6 @@
 from data import IHAs
 from data import IKAs
+def houseForm():
 #IKA:2
 #IHA:6
 o = 30

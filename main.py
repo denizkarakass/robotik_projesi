@@ -19,7 +19,7 @@ for i in range(0, 2):
 print(aktifIKA)
 
 # Agent sayısına göre formasyon alma
-if(aktifIHA == 10 and aktifIKA == 3):
+if(aktifIHA == 9 and aktifIKA == 3):
     from formController.triangleStarForm import triangleStarForm
 
 if(aktifIHA == 10 and aktifIKA == 1):

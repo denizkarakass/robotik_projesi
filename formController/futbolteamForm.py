@@ -1,5 +1,6 @@
 from data import IHAs
 from data import IKAs
+def futbolteamForm():
 #IKA:1
 #IHA:10
 #IKA kaleci

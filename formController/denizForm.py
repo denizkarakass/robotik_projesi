@@ -1,5 +1,6 @@
 from data import IHAs
 from data import IKAs
+def denizForm():
 #IKA:1
 #IHA:8
 o = 50

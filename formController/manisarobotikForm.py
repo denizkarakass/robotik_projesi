@@ -1,5 +1,6 @@
 from data import IHAs
 from data import IKAs
+def manisarobotikForm():
 #IKA:1
 #IHA:6
 o = 20

@@ -1,5 +1,6 @@
 from data import IHAs
 from data import IKAs
+def newmoonForm():
 #IKA:3
 #IHA:7
 o = 10   
