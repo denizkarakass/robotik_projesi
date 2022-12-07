@@ -1,5 +1,6 @@
 from data import IHAs
 from data import IKAs
+def furkanForm():
 #IKA:1
 #IHA:7
 o = 20

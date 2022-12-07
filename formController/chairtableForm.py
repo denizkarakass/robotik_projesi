@@ -1,5 +1,6 @@
 from data import IHAs
 from data import IKAs
+def chairtableForm():
 #IHA:7
 #IKA:2
 #IKA masa sağ tarafı

@@ -1,5 +1,6 @@
 from data import IHAs
 from data import IKAs
+def emreForm():
 #IKA:2
 #IHA:8
 o = 50
