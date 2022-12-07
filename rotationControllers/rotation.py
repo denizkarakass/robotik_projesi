@@ -2,9 +2,9 @@ from data import IHAs
 from data import IKAs
 
 
-for i in range(0, IHAs.__len__):
+for i in range(0, IHAs.len()):
     if (IHAs[i]["status"] == "1"):
-        while (IHAs[i]["e_x"] < 10):
+        while ((IHAs[i]["e_x"] < 10) or (IHAs[i]["e-y"] < 10) or (IHAs[i]["e-ny"] < 10)):
             # yukarı çıkma
             if (IHAs[i]["e_y"] > 10):
               IHAs[i]["y"] += 10
