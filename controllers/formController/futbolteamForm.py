@@ -1,5 +1,5 @@
-from modelController import IHAs
-from modelController import IKAs
+from ..modelController import IHAs
+from ..modelController import IKAs
 #IKA kaleci
 #IHA geri kalan takım
 o = 50
