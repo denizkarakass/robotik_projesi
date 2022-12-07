@@ -1,7 +1,7 @@
 from data import IHAs
 from data import IKAs
 def happyfaceForm():
-#IKA:3
+#IKA:2
 #IHA:10
 #IKAlar burnu
 #IHAlar yüzün geri kalanını
@@ -40,12 +40,9 @@ IHAs[9]["z"] =+  o +50
 #IKAların x konumu
 IKAs[0]["x"] =+  o +100
 IKAs[1]["x"] =+  o +90
-IKAs[2]["x"] =+  o +100
 #IKAların y konumu
 IKAs[0]["y"] =+ 0
 IKAs[1]["y"] =+ 0
-IKAs[2]["y"] =+ 0
 #IKAların z konumu
 IKAs[0]["z"] =+  o +75
 IKAs[1]["z"] =+  o +75
-IKAs[2]["z"] =+  o +85
