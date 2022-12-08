@@ -32,10 +32,10 @@ def chairtableForm():
     IHAs[6]["z"] = o 
     #IKAların x konumu
     IKAs[0]["x"] = o + 100
-    IKAs[0]["x"] = o + 100
+    IKAs[1]["x"] = o + 100
     #IKAların y konumu
     IKAs[0]["y"] = 0
-    IKAs[0]["y"] = 0
+    IKAs[1]["y"] = 0
     #IKAların z konumu
     IKAs[0]["z"] = o 
-    IKAs[0]["z"] = o + 100
+    IKAs[1]["z"] = o + 100
