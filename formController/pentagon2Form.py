@@ -11,9 +11,9 @@ def pentagonForm():
     IHAs[3]["x"] = o +40,12
 
 #IHAların y konumu
-    IHAs[0]["y"] = 100
+    IHAs[0]["y"] = 50
     IHAs[1]["y"] = 100
-    IHAs[2]["y"] = 100
+    IHAs[2]["y"] = 50
     IHAs[3]["y"] = 100
 
 #IHAların z konumu
