@@ -2,22 +2,23 @@
 from data import IHAs
 from data import IKAs
 
-# Aktif iha sayısı
+
+
+
+# Aktif AGENT SAYISI BULMA START
 aktifIHA = 1
 aktifIKA = 1
-
 for i in range(0, 9):
   if(IHAs[i]["status"] == "1"):
-      aktifIHA += 1
-
-# Aktif ika sayısı
-aktifIKA = 1
+      aktifIHA += 1      
 for i in range(0, 2):
   if(IKAs[i]["status"] == "1"):
       aktifIKA += 1
-      
-print(aktifIKA)
+# Aktif AGENT SAYISI BULMA END
 
+for i in range(0, aktifIHA + 1):
+  IHAs[i]["y"]  += 20   
+     
 # Agent sayısına göre formasyon alma
 if(aktifIHA == 9 and aktifIKA == 3):
     from formController.triangleStarForm import triangleStarForm
@@ -63,5 +64,17 @@ if(aktifIHA == 5 and aktifIKA == 3):
     
 if(aktifIHA == 4 and aktifIKA == 1):
     from formController.pentagonForm import pentagonForm  
-
     
+    
+    
+    
+from rotationControllers.IHArotation import IHArotation    
+from rotationControllers.IKArotation import IKArotation    
+
+for i in range(0, 9):
+ if(aktifIHA == 9 and aktifIKA == 3):
+  
+
+
+# Yangın görevi için panelden gelen ilgili konumlara yönlendirme yapıacak formasyon olmadan
+# Rotasyon ile formasyon arasında ilişki kurulacak.  
