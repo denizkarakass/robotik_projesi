@@ -26,6 +26,8 @@ def happyfaceForm():
          IHAs[5]["y"] =  100
          IHAs[6]["y"] =  100
          IHAs[7]["y"] =  100
+         IHAs[8]["y"] =  100
+         IHAs[9]["y"] =  100
         #IHAların z konumu
          IHAs[0]["z"] =  o  
          IHAs[1]["z"] =  o  
