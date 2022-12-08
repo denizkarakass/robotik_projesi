@@ -22,7 +22,7 @@ def futbolteamForm():
     IHAs[1]["y"]= 100
     IHAs[2]["y"]= 100
     IHAs[3]["y"]= 100
-    IHAs[4]["y"]=  100
+    IHAs[4]["y"]= 100
     IHAs[5]["y"]= 100
     IHAs[6]["y"]= 100
     IHAs[7]["y"]= 100
