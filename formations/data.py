@@ -23,4 +23,3 @@ IKA3 = mycol2.find_one({"name": "İKA3"})
 
 IHAs = [IHA1, IHA2, IHA3, IHA4, IHA5, IHA6, IHA7, IHA8, IHA9]
 IKAs = [IKA1, IKA2, IKA3]
-
