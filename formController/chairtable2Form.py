@@ -4,7 +4,7 @@ from data import IKAs
  #IKA:2
 #IKA masa sağ tarafı
 #IHA masa sol tarafı,sandalye
-def chairtableForm():
+def chairtable2Form():
     o = 20
  #IHAların x konumu
     IHAs[0]["x"] = o + 30
@@ -15,10 +15,10 @@ def chairtableForm():
     IHAs[5]["x"] = o + 60
     IHAs[6]["x"] = o + 60
 #IHAların y konumu
-    IHAs[0]["y"] = 100
-    IHAs[1]["y"] = 100
-    IHAs[2]["y"] = 100
-    IHAs[3]["y"] = 100
+    IHAs[0]["y"] = 50
+    IHAs[1]["y"] = 50
+    IHAs[2]["y"] = 50
+    IHAs[3]["y"] = 50
     IHAs[4]["y"] = 100
     IHAs[5]["y"] = 100
     IHAs[6]["y"] = 100
@@ -32,10 +32,10 @@ def chairtableForm():
     IHAs[6]["z"] = o 
     #IKAların x konumu
     IKAs[0]["x"] = o + 100
-    IKAs[1]["x"] = o + 100
+    IKAs[0]["x"] = o + 100
     #IKAların y konumu
     IKAs[0]["y"] = 0
-    IKAs[1]["y"] = 0
+    IKAs[0]["y"] = 0
     #IKAların z konumu
     IKAs[0]["z"] = o 
-    IKAs[1]["z"] = o + 100
+    IKAs[0]["z"] = o + 100

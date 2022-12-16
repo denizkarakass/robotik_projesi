@@ -1,22 +1,22 @@
 from data import IHAs
 from data import IKAs
-def futbolteamForm():
+def futbolteam2Form():
     #IKA:1
     #IHA:10
     #IKA kaleci
     #IHA geri kalan takım
     o = 50
     #IHAların x konumu
-    IHAs[0]["x"]=o + 40
-    IHAs[1]["x"]=o + 60
-    IHAs[2]["x"]=o + 80
-    IHAs[3]["x"]=o + 100
-    IHAs[4]["x"]=o + 50
-    IHAs[5]["x"]=o + 70
-    IHAs[6]["x"]=o + 90
-    IHAs[7]["x"]=o + 50
-    IHAs[8]["x"]=o + 70
-    IHAs[9]["x"]=o + 90
+    IHAs[0]["x"]=o + 20
+    IHAs[1]["x"]=o + 40
+    IHAs[2]["x"]=o + 60
+    IHAs[3]["x"]=o + 80
+    IHAs[4]["x"]=o + 30
+    IHAs[5]["x"]=o + 50
+    IHAs[6]["x"]=o + 70
+    IHAs[7]["x"]=o + 30
+    IHAs[8]["x"]=o + 50
+    IHAs[9]["x"]=o + 70
     #IHAların y konumu
     IHAs[0]["y"]= 100
     IHAs[1]["y"]= 100
@@ -40,7 +40,7 @@ def futbolteamForm():
     IHAs[8]["z"]=  o + 100
     IHAs[9]["z"]=  o + 100
     #IKAların x konumu
-    IKAs[0]["x"]= +o + 70
+    IKAs[0]["x"]= +o + 50
     #IKAların y konumu    
     IKAs[0]["y"]= 0
     #IKAların z konumu    

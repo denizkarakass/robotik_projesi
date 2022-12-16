@@ -1,22 +1,22 @@
 from data import   IHAs
 from data import   IKAs
-def happyfaceForm():
+def happyface2Form():
 #IKA:2
 #IHA:10
 #IKAlar burnu
 #IHAlar yüzün geri kalanını
 #IHAların x konumu
          o = 10
-         IHAs[0]["x"] =  o +50
-         IHAs[1]["x"] =  o +150
-         IHAs[2]["x"] =  o +150
-         IHAs[3]["x"] =  o +50
-         IHAs[4]["x"] =  o +75
-         IHAs[5]["x"] =  o +125
-         IHAs[6]["x"] =  o +75
-         IHAs[7]["x"] =  o +75
-         IHAs[8]["x"] =  o +125
-         IHAs[9]["x"] =  o +125
+         IHAs[0]["x"] =  o +60
+         IHAs[1]["x"] =  o +160
+         IHAs[2]["x"] =  o +160
+         IHAs[3]["x"] =  o +60
+         IHAs[4]["x"] =  o +85
+         IHAs[5]["x"] =  o +135
+         IHAs[6]["x"] =  o +85
+         IHAs[7]["x"] =  o +85
+         IHAs[8]["x"] =  o +135
+         IHAs[9]["x"] =  o +135
         #IHAların y konumu
          IHAs[0]["y"] =  100
          IHAs[1]["y"] =  100
@@ -26,8 +26,6 @@ def happyfaceForm():
          IHAs[5]["y"] =  100
          IHAs[6]["y"] =  100
          IHAs[7]["y"] =  100
-         IHAs[8]["y"] =  100
-         IHAs[9]["y"] =  100
         #IHAların z konumu
          IHAs[0]["z"] =  o  
          IHAs[1]["z"] =  o  
@@ -40,8 +38,8 @@ def happyfaceForm():
          IHAs[8]["z"] =  o +25 
          IHAs[9]["z"] =  o +50
          #IKAların x konumu
-         IKAs[0]["x"] =  o +100
-         IKAs[1]["x"] =  o +90
+         IKAs[0]["x"] =  o +110
+         IKAs[1]["x"] =  o +100
         #IKAların y konumu
          IKAs[0]["y"] = 0
          IKAs[1]["y"] = 0

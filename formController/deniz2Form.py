@@ -1,7 +1,7 @@
 from data import IHAs
 from data import IKAs
-def emreForm():
-    #IKA:2
+def deniz2Form():
+    #IKA:1
     #IHA:8
     o = 50
     #IHAların x konumu
@@ -23,20 +23,17 @@ def emreForm():
     IHAs[6]["y"] = 100
     IHAs[7]["y"] = 100
     #IHAların z konumu
-    IHAs[0]["z"] = o + 86
-    IHAs[1]["z"] = o + 36
-    IHAs[2]["z"] = o + 59
-    IHAs[3]["z"] = o + 10
-    IHAs[4]["z"] = o + 117
-    IHAs[5]["z"] = o + 178
-    IHAs[6]["z"] = o + 150
-    IHAs[7]["z"] = o + 190
+    IHAs[0]["z"] = o + 96
+    IHAs[1]["z"] = o + 46
+    IHAs[2]["z"] = o + 69
+    IHAs[3]["z"] = o + 20
+    IHAs[4]["z"] = o + 127
+    IHAs[5]["z"] = o + 188
+    IHAs[6]["z"] = o + 160
+    IHAs[7]["z"] = o + 195
     #IKAların x konumu
-    IKAs[0]["x"] = o + 58
-    IKAs[1]["x"] = o + 158
+    IKAs[0]["x"] = o + 158
     #IKAların y konumu
     IKAs[0]["y"] = 0
-    IKAs[1]["y"] = 0
     #IKAların z konumu
-    IKAs[0]["z"] = o + 153
-    IKAs[1]["z"] = o + 53
+    IKAs[0]["z"] = o + 63
