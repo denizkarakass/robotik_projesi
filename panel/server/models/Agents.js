@@ -9,67 +9,67 @@ const IHASchema = new mongoose.Schema(
       type: String
     },
     x: {
-      type: String
+      type: Int32Array
     },
     y: {
-      type: String
+      type: Int32Array
     },
     z: {
-      type: String
+      type: Int32Array
     },
     e_x: {
-      type: String
+      type: Int32Array
     },
     e_nx: {
-      type: String
+      type: Int32Array
     },
     e_y: {
-      type: String
+      type: Int32Array
     },
     e_ny: {
-      type: String
+      type: Int32Array
     },
     e_z: {
-      type: String
+      type: Int32Array
     },
     e_nz: {
-      type: String
+      type: Int32Array
     },
     a_x: {
-      type: String
+      type: Int32Array
     },
     a_nx: {
-      type: String
+      type: Int32Array
     },
     a_y: {
-      type: String
+      type: Int32Array
     },
     a_ny: {
-      type: String
+      type: Int32Array
     },
     a_z: {
-      type: String
+      type: Int32Array
     },
     a_nz: {
-      type: String
+      type: Int32Array
     },
     l_x: {
-      type: String
+      type: Int32Array
     },
     l_y: {
-      type: String
+      type: Int32Array
     },
     l_z: {
-      type: String
+      type: Int32Array
     },
     s_x: {
-      type: String
+      type: Int32Array
     },
     s_y: {
-      type: String
+      type: Int32Array
     },
     s_z: {
-      type: String
+      type: Int32Array
     },
   },
 );

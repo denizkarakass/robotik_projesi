@@ -6,10 +6,10 @@ from data import IKAs
 # Aktif AGENT SAYISI BULMA START
 aktifIHA = 1
 aktifIKA = 1
-for i in range(0, 9):
+for i in range(0, 15):
     if (IHAs[i]["status"] == "1"):
         aktifIHA += 1
-for i in range(0, 2):
+for i in range(0, 7):
     if (IKAs[i]["status"] == "1"):
         aktifIKA += 1
 # Aktif AGENT SAYISI BULMA END
@@ -39,10 +39,10 @@ for x in range(0, sayac):
         # sola gitme
         elif (IHAs[i]["e_nz"] > 30):
             IHAs[i]["s_z"] -= 10
-        # geri gitme
+        # ileri gitme
         if (IHAs[i]["e_x"] > 30):
             IHAs[i]["s_x"] += 10
-        # ileri gitme
+        # geri gitme
         elif (IHAs[i]["e_nx"] > 30):
             IHAs[i]["s_x"] -= 10
             
@@ -66,7 +66,7 @@ for x in range(0, sayac):
  #Formasyonlar yaptırma ve navigasyon START
  formasyon = "1"
  if(formasyon == "1"):
-   # Yılan Üçlemesi Formasyon yaptırma START
+   # Okçunun Oku Formasyon yaptırma START
    for i in range(1,int(aktifIHA / 2) + 1 ):
     IHAs[i]["s_x"] = IHAs[i - 1]["a_x"] + 10
     IHAs[i]["s_y"] = IHAs[i - 1]["a_y"]
@@ -88,7 +88,7 @@ for x in range(0, sayac):
       IKAs[i]["s_x"] = IKAs[i - 1]["a_x"]
       IKAs[i]["s_y"] = IKAs[i - 1]["a_y"]
       IKAs[i]["s_z"] = IKAs[i - 1]["a_z"]           
-  # Yılan Üçlemesi Formasyon yaptırma END
+  # Okçunun Oku Formasyon yaptırma END
  elif(formasyon == "2"):
      print("Formasyon 2 yazılacak.")
  #Formasyonlar yaptırma ve navigasyon END  

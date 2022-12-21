@@ -10,8 +10,7 @@ import morgan from "morgan";
 import pageRoutes from "./routes/pageRoute";
 
 
-// Data imports
-import Agenta from "./models/User.js";
+
 
 
 
