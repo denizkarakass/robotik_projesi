@@ -54,7 +54,7 @@ if (landing == "not"):
             IKAs[0]["s_y"] = 0
             IKAs[0]["s_z"] = IHAs[0]["a_z"]
             if (aktifIKA > 0):
-                for i in range(1, aktifIKA-1):
+                for i in range(0, aktifIKA-1):
                     IKAs[i]["s_x"] = IKAs[i - 1]["s_x"]
                     IKAs[i]["s_y"] = IKAs[i - 1]["s_y"]
                     IKAs[i]["s_z"] = IKAs[i - 1]["s_z"]
