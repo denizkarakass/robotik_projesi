@@ -21,7 +21,7 @@ for i in range(0, aktifIHA):
     IHAs[i]["s_y"] += 50
 # İHA eş zamanlı kalkış END
 
-landing = "ok"
+landing = "not"
 
 if (landing == "not"):
     # Rotasyon navigasyon formasyon döngüsü START
@@ -50,9 +50,9 @@ if (landing == "not"):
                 IHAs[i]["s_y"] = IHAs[i - 1]["s_y"]
                 IHAs[i]["s_z"] = IHAs[i - 1]["s_z"] - 10
 
-            IKAs[0]["s_x"] = IHAs[0]["a_x"] - 10
+            IKAs[0]["s_x"] = IHAs[0]["s_x"] - 10
             IKAs[0]["s_y"] = 0
-            IKAs[0]["s_z"] = IHAs[0]["a_z"]
+            IKAs[0]["s_z"] = IHAs[0]["s_z"]
             
             for i in range(1, aktifIKA):
                     IKAs[i]["s_x"] = IKAs[i - 1]["s_x"]
