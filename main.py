@@ -50,11 +50,11 @@ if (landing == "not"):
                 IHAs[i]["s_y"] = IHAs[i - 1]["s_y"]
                 IHAs[i]["s_z"] = IHAs[i - 1]["s_z"] - 10
 
-            IKAs[0]["s_x"] = IHAs[0]["a_x"] + 10
+            IKAs[0]["s_x"] = IHAs[0]["a_x"] - 10
             IKAs[0]["s_y"] = 0
             IKAs[0]["s_z"] = IHAs[0]["a_z"]
             if (aktifIKA > 0):
-                for i in range(0, aktifIKA-1):
+                for i in range(1, aktifIKA - 1):
                     IKAs[i]["s_x"] = IKAs[i - 1]["s_x"]
                     IKAs[i]["s_y"] = IKAs[i - 1]["s_y"]
                     IKAs[i]["s_z"] = IKAs[i - 1]["s_z"]
@@ -89,7 +89,7 @@ if (landing == "not"):
                 "s_z": IHAs[i]["s_z"],
             }}
             mycol.update_one(name, newvalues)
-        for i in range(0, aktifIKA):
+        for i in range(0, aktifIKA - 1):
             name = {"name": IKAs[i]["name"]}
             newvalues = {"$set": {
                 "e_x": IKAs[i]["e_x"],
@@ -150,7 +150,7 @@ elif (landing == "ok"):
             "s_z": IHAs[i]["s_z"],
         }}
         mycol.update_one(name, newvalues)
-    for i in range(0, aktifIKA):
+    for i in range(0, aktifIKA - 1):
         name = {"name": IKAs[i]["name"]}
         newvalues = {"$set": {
             "e_x": IKAs[i]["e_x"],
