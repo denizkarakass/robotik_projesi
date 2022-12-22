@@ -89,6 +89,27 @@ if (landing == "not"):
                 "s_z": IHAs[i]["s_z"],
             }}
             mycol.update_one(name, newvalues)
+        for i in range(0, aktifIKA):
+            name = {"name": IKAs[i]["name"]}
+            newvalues = {"$set": {
+                "e_x": IKAs[i]["e_x"],
+                "e_nx": IKAs[i]["e_nx"],
+                "e_y": IKAs[i]["e_y"],
+                "e_ny": IKAs[i]["e_ny"],
+                "e_z": IKAs[i]["e_z"],
+                "e_nz": IKAs[i]["e_nz"],
+                "a_x": IKAs[i]["a_x"],
+                "a_nx": IKAs[i]["a_nx"],
+                "a_y": IKAs[i]["a_y"],
+                "a_ny": IKAs[i]["a_ny"],
+                "a_z": IKAs[i]["a_z"],
+                "a_nz": IKAs[i]["a_nz"],
+                "s_x": IKAs[i]["s_x"],
+                "s_y": IKAs[i]["s_y"],
+                "s_z": IKAs[i]["s_z"],
+            }}
+            mycol.update_one(name, newvalues)
+
             # Verileri gönderme END
     # Rotasyon navigasyon formasyon döngüsü END
 
@@ -127,6 +148,26 @@ elif (landing == "ok"):
             "s_x": IHAs[i]["s_x"],
             "s_y": IHAs[i]["s_y"],
             "s_z": IHAs[i]["s_z"],
+        }}
+        mycol.update_one(name, newvalues)
+    for i in range(0, aktifIKA):
+        name = {"name": IKAs[i]["name"]}
+        newvalues = {"$set": {
+            "e_x": IKAs[i]["e_x"],
+            "e_nx": IKAs[i]["e_nx"],
+            "e_y": IKAs[i]["e_y"],
+            "e_ny": IKAs[i]["e_ny"],
+            "e_z": IKAs[i]["e_z"],
+            "e_nz": IKAs[i]["e_nz"],
+            "a_x": IKAs[i]["a_x"],
+            "a_nx": IKAs[i]["a_nx"],
+            "a_y": IKAs[i]["a_y"],
+            "a_ny": IKAs[i]["a_ny"],
+            "a_z": IKAs[i]["a_z"],
+            "a_nz": IKAs[i]["a_nz"],
+            "s_x": IKAs[i]["s_x"],
+            "s_y": IKAs[i]["s_y"],
+            "s_z": IKAs[i]["s_z"],
         }}
         mycol.update_one(name, newvalues)
         # Verileri gönderme END
