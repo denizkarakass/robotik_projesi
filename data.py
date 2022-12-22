@@ -27,11 +27,8 @@ IKA2 = mycol2.find_one({"name": "İKA2"})
 IKA3 = mycol2.find_one({"name": "İKA3"})
 IKA4 = mycol2.find_one({"name": "İKA4"})
 IKA5 = mycol2.find_one({"name": "İKA5"})
-IKA6 = mycol2.find_one({"name": "İKA6"})
-IKA7 = mycol2.find_one({"name": "İKA7"})
-IKA8 = mycol2.find_one({"name": "İKA8"})
 
 
 IHAs = [IHA1, IHA2, IHA3, IHA4, IHA5, IHA6, IHA7, IHA8,
         IHA9, IHA10, IHA11, IHA12, IHA13, IHA14, IHA15, IHA16]
-IKAs = [IKA1, IKA2, IKA3, IKA4, IKA5, IKA6, IKA7, IKA8]
+IKAs = [IKA1, IKA2, IKA3, IKA4, IKA5]
