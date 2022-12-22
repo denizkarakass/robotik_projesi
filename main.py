@@ -40,7 +40,7 @@ if (landing == "not"):
                 IHAs[i]["s_y"] = IHAs[i - 1]["s_y"]
                 IHAs[i]["s_z"] = IHAs[i - 1]["s_z"] + 10
 
-            IHAs[int(aktifIHA/2) + 1]["s_x"] = IHAs[0]["s_x"] + 10
+            IHAs[int(aktifIHA/2) + 1]["s_x"] = IHAs[0]["s_x"] + 10 
             IHAs[int(aktifIHA/2) + 1]["s_y"] = IHAs[0]["s_y"]
             IHAs[int(aktifIHA/2) + 1]["s_z"] = IHAs[0]["s_z"] 
 
