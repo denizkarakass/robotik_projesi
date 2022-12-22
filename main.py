@@ -28,7 +28,8 @@ if (landing == "not"):
     for x in range(0, 500):
         time.sleep(5)
         print("veri simülasyona gitti çalışıyor")
-       
+
+        # Bu kısımda hangi yöne gideceklerse o yönde ilerlemelerini sağlıyoruz sürünün.
         IHAs[0]["s_z"] += 10
 
         # Formasyon ve navigasyon yaptırma  START
@@ -40,15 +41,15 @@ if (landing == "not"):
                 IHAs[i]["s_y"] = IHAs[i - 1]["s_y"]
                 IHAs[i]["s_z"] = IHAs[i - 1]["s_z"] + 10
 
-            IHAs[int(aktifIHA/2) + 1]["s_x"] = IHAs[0]["s_x"] + 10 
+            IHAs[int(aktifIHA/2) + 1]["s_x"] = IHAs[0]["s_x"] + 10
             IHAs[int(aktifIHA/2) + 1]["s_y"] = IHAs[0]["s_y"]
-            IHAs[int(aktifIHA/2) + 1]["s_z"] = IHAs[0]["s_z"] 
+            IHAs[int(aktifIHA/2) + 1]["s_z"] = IHAs[0]["s_z"]
 
             for i in range(int(aktifIHA/2), aktifIHA):
                 IHAs[i]["s_x"] = IHAs[i - 1]["s_x"] - 10
                 IHAs[i]["s_y"] = IHAs[i - 1]["s_y"]
                 IHAs[i]["s_z"] = IHAs[i - 1]["s_z"] - 10
-                
+
             IKAs[0]["s_x"] = IHAs[0]["a_x"] + 10
             IKAs[0]["s_y"] = 0
             IKAs[0]["s_z"] = IHAs[0]["a_z"]
