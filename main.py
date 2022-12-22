@@ -11,7 +11,7 @@ aktifIKA = 1
 for i in range(0, 15):
     if (IHAs[i]["status"] == "1"):
         aktifIHA += 1
-for i in range(0, 5):
+for i in range(0, 4):
     if (IKAs[i]["status"] == "1"):
         aktifIKA += 1
 # Aktif AGENT SAYISI BULMA END
@@ -21,7 +21,7 @@ for i in range(0, aktifIHA):
     IHAs[i]["s_y"] += 50
 # İHA eş zamanlı kalkış END
 
-landing = "not"
+landing = "ok"
 
 if (landing == "not"):
     # Rotasyon navigasyon formasyon döngüsü START
@@ -54,7 +54,7 @@ if (landing == "not"):
             IKAs[0]["s_y"] = 0
             IKAs[0]["s_z"] = IHAs[0]["a_z"]
             
-            for i in range(1, aktifIKA - 1):
+            for i in range(1, aktifIKA):
                     IKAs[i]["s_x"] = IKAs[i - 1]["s_x"]
                     IKAs[i]["s_y"] = IKAs[i - 1]["s_y"]
                     IKAs[i]["s_z"] = IKAs[i - 1]["s_z"]
@@ -89,7 +89,7 @@ if (landing == "not"):
                 "s_z": IHAs[i]["s_z"],
             }}
             mycol.update_one(name, newvalues)
-        for i in range(0, aktifIKA - 1):
+        for i in range(0, aktifIKA):
             name2 = {"name": IKAs[i]["name"]}
             newvalues2 = {"$set": {
                 "e_x": IKAs[i]["e_x"],
@@ -119,7 +119,7 @@ elif (landing == "ok"):
         IHAs[i]["s_x"] = IHAs[i]["l_x"]
         IHAs[i]["s_y"] = IHAs[i]["l_y"]
         IHAs[i]["s_z"] = IHAs[i]["l_z"]
-    for i in range(0, aktifIKA-1):
+    for i in range(0, aktifIKA):
         IKAs[i]["s_x"] = IKAs[i]["l_x"]
         IKAs[i]["s_y"] = IKAs[i]["l_y"]
         IKAs[i]["s_z"] = IKAs[i]["l_z"]
@@ -150,7 +150,7 @@ elif (landing == "ok"):
             "s_z": IHAs[i]["s_z"],
         }}
         mycol.update_one(name, newvalues)
-    for i in range(0, aktifIKA - 1):
+    for i in range(0, aktifIKA):
         name2 = {"name": IKAs[i]["name"]}
         newvalues2 = {"$set": {
             "e_x": IKAs[i]["e_x"],
