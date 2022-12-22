@@ -44,7 +44,7 @@ if (landing == "not"):
             IHAs[int(aktifIHA/2) + 1]["s_y"] = IHAs[0]["s_y"]
             IHAs[int(aktifIHA/2) + 1]["s_z"] = IHAs[0]["s_z"] 
 
-            for i in range(int(aktifIHA/2) + 1, aktifIHA):
+            for i in range(int(aktifIHA/2), aktifIHA):
                 IHAs[i]["s_x"] = IHAs[i - 1]["s_x"] - 10
                 IHAs[i]["s_y"] = IHAs[i - 1]["s_y"]
                 IHAs[i]["s_z"] = IHAs[i - 1]["s_z"] - 10
