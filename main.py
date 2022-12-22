@@ -55,7 +55,7 @@ if (landing == "not"):
             IKAs[0]["s_z"] = IHAs[0]["s_z"]
             
             for i in range(1, aktifIKA):
-                    IKAs[i]["s_x"] = IKAs[i - 1]["s_x"] - 10
+                    IKAs[i]["s_x"] = IKAs[i - 1]["s_x"] - 20
                     IKAs[i]["s_y"] = IKAs[i - 1]["s_y"]
                     IKAs[i]["s_z"] = IKAs[i - 1]["s_z"]
             # Okçunun Oku Formasyon yaptırma END
