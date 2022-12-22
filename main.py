@@ -108,7 +108,7 @@ if (landing == "not"):
                 "s_y": IKAs[i]["s_y"],
                 "s_z": IKAs[i]["s_z"],
             }}
-            mycol.update_one(name, newvalues)
+            mycol2.update_one(name, newvalues)
 
             # Verileri gönderme END
     # Rotasyon navigasyon formasyon döngüsü END
@@ -169,5 +169,5 @@ elif (landing == "ok"):
             "s_y": IKAs[i]["s_y"],
             "s_z": IKAs[i]["s_z"],
         }}
-        mycol.update_one(name, newvalues)
+        mycol2.update_one(name, newvalues)
         # Verileri gönderme END
