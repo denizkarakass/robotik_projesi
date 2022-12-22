@@ -53,8 +53,8 @@ if (landing == "not"):
             IKAs[0]["s_x"] = IHAs[0]["a_x"] - 10
             IKAs[0]["s_y"] = 0
             IKAs[0]["s_z"] = IHAs[0]["a_z"]
-            if (aktifIKA > 0):
-                for i in range(1, aktifIKA - 1):
+            
+            for i in range(1, aktifIKA - 1):
                     IKAs[i]["s_x"] = IKAs[i - 1]["s_x"]
                     IKAs[i]["s_y"] = IKAs[i - 1]["s_y"]
                     IKAs[i]["s_z"] = IKAs[i - 1]["s_z"]
@@ -90,8 +90,8 @@ if (landing == "not"):
             }}
             mycol.update_one(name, newvalues)
         for i in range(0, aktifIKA - 1):
-            name = {"name": IKAs[i]["name"]}
-            newvalues = {"$set": {
+            name2 = {"name": IKAs[i]["name"]}
+            newvalues2 = {"$set": {
                 "e_x": IKAs[i]["e_x"],
                 "e_nx": IKAs[i]["e_nx"],
                 "e_y": IKAs[i]["e_y"],
@@ -108,7 +108,7 @@ if (landing == "not"):
                 "s_y": IKAs[i]["s_y"],
                 "s_z": IKAs[i]["s_z"],
             }}
-            mycol2.update_one(name, newvalues)
+            mycol2.update_one(name2, newvalues2)
 
             # Verileri gönderme END
     # Rotasyon navigasyon formasyon döngüsü END
@@ -120,9 +120,9 @@ elif (landing == "ok"):
         IHAs[i]["s_y"] = IHAs[i]["l_y"]
         IHAs[i]["s_z"] = IHAs[i]["l_z"]
     for i in range(0, aktifIKA-1):
-        IHAs[i]["s_x"] = IKAs[i]["l_x"]
-        IHAs[i]["s_y"] = IKAs[i]["l_y"]
-        IHAs[i]["s_z"] = IKAs[i]["l_z"]
+        IKAs[i]["s_x"] = IKAs[i]["l_x"]
+        IKAs[i]["s_y"] = IKAs[i]["l_y"]
+        IKAs[i]["s_z"] = IKAs[i]["l_z"]
 
         # Verileri gönderme START
     myclient = pymongo.MongoClient(
@@ -151,8 +151,8 @@ elif (landing == "ok"):
         }}
         mycol.update_one(name, newvalues)
     for i in range(0, aktifIKA - 1):
-        name = {"name": IKAs[i]["name"]}
-        newvalues = {"$set": {
+        name2 = {"name": IKAs[i]["name"]}
+        newvalues2 = {"$set": {
             "e_x": IKAs[i]["e_x"],
             "e_nx": IKAs[i]["e_nx"],
             "e_y": IKAs[i]["e_y"],
@@ -169,5 +169,5 @@ elif (landing == "ok"):
             "s_y": IKAs[i]["s_y"],
             "s_z": IKAs[i]["s_z"],
         }}
-        mycol2.update_one(name, newvalues)
+        mycol2.update_one(name2, newvalues2)
         # Verileri gönderme END
