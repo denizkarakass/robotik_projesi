@@ -25,11 +25,11 @@ landing = "not"
 
 if (landing == "not"):
     # Rotasyon navigasyon formasyon döngüsü START
-    for x in range(0, 5):
+    for x in range(0, 500):
         time.sleep(5)
         print("veri simülasyona gitti çalışıyor")
        
-        IHAs[0]["s_x"] += 10
+        IHAs[0]["s_z"] += 10
 
         # Formasyon ve navigasyon yaptırma  START
         formasyon = "1"
