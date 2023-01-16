@@ -1,0 +1,272 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+
+
+public class Sensor : MonoBehaviour
+{
+    public TextMeshProUGUI arkaMesafeText, onMesafeText, sagMesafeText, solMesafeText, yukariMesafeText, asagiMesafeText;
+    public TextMeshProUGUI enKucukText;
+    public float maxDistance = 30;
+    public float enKucuk = 888;//Dinamik olarak 6nın içndeki hesaplanırsa buna gerek olmayacak.
+    public float arkaMesafe, onMesafe, sagMesafe, solMesafe, yukariMesafe, asagiMesafe;
+    public float[] mesafeler;
+    public string enKucukYon;
+
+
+
+
+    void Start()
+    {
+        enKucuk = mesafeler[0];
+
+        arkaMesafe = 0;
+        onMesafe = 0;
+        sagMesafe = 0;
+        solMesafe = 0;
+        yukariMesafe = 0;
+        asagiMesafe = 0;
+
+
+    }
+
+    void Update()
+    {   
+
+
+/*
+
+
+        // bu en iyisi fakat enkucuk ile eşitlemeden yapmıyor muyuz abicim
+        enKucuk = 888;  // bunu yazıncaanlık olarak listedekilerden gösteriyor enküçükte twakılı kalmıyor ama bu doğru bir yol mu bilmiyorum.
+        mesafeler = new float[6]{arkaMesafe, onMesafe, sagMesafe, solMesafe, yukariMesafe, asagiMesafe};   ////// bunun tama anlayamadım başka  bir şekilde bulsam daha iyi olur... Aslında en alttaki güzel fakat en büyük takılı kalıyor ona birtane daha bir değişken gibi bir şey aaralrsam olur belki
+        
+        foreach (float mesafe in mesafeler)
+            {
+                if (mesafe < enKucuk) 
+                {
+                    enKucuk = mesafe;
+
+                    enKucukText.text = "En kcük: " + enKucukYon + "ve " + enKucuk.ToString("F2") + "Metre";
+                   //enKucukYon = mesafe.;
+                }       
+            }
+*/
+
+
+
+
+        
+        enKucuk = 8888;  // bunu yazıncaanlık olarak listedekilerden gösteriyor enküçükte twakılı kalmıyor ama bu doğru bir yol mu bilmiyorum.
+        mesafeler = new float[6]{arkaMesafe, onMesafe, sagMesafe, solMesafe, yukariMesafe, asagiMesafe};   ////// bunun tama anlayamadım başka  bir şekilde bulsam daha iyi olur... Aslında en alttaki güzel fakat en büyük takılı kalıyor ona birtane daha bir değişken gibi bir şey aaralrsam olur belki
+
+        for (int i = 0; i < mesafeler.Length; i++)
+        {
+            if (mesafeler[i] < enKucuk)
+            {
+                enKucuk = mesafeler[i];
+
+                if (mesafeler[i] == arkaMesafe)
+                {
+                    enKucukYon = "Arka";
+                }
+                else if (mesafeler[i] == onMesafe)
+                {
+                    enKucukYon = "Ön";
+                }
+                else if (mesafeler[i] == sagMesafe)
+                {
+                    enKucukYon = "Sağ";
+                }
+                else if (mesafeler[i] == solMesafe)
+                {
+                    enKucukYon = "Sol";
+                }
+                else if (mesafeler[i] == yukariMesafe)
+                {
+                    enKucukYon = "Yukari";
+                }
+                else if (mesafeler[i] == asagiMesafe)
+                {
+                    enKucukYon = "Aşaği";
+                }
+                else
+                {
+                    enKucukYon = "NULL";
+                    Debug.Log("En küçük yön bulunamadı");
+                }
+
+                enKucukText.text = "En kcük: " + enKucukYon + "ve " + enKucuk.ToString("F2") + "Metre";
+            }
+
+
+            
+
+        }
+        
+
+
+        
+       
+    }
+
+
+
+    #region Gizmos //Yazdirma//Çizdirme//Sersör Mesafeleri
+    void OnDrawGizmos()
+    {
+        RaycastHit hit;
+
+        if (Physics.BoxCast(transform.position, transform.lossyScale * 5, -Vector3.forward, out hit, Quaternion.identity, maxDistance))
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawRay(transform.position, -Vector3.forward * hit.distance);
+            Gizmos.DrawWireCube(transform.position - Vector3.forward * hit.distance, transform.lossyScale * 10);
+
+            arkaMesafe = hit.distance;
+        }
+        else
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawRay(transform.position, -Vector3.forward * maxDistance);
+            Gizmos.DrawWireCube(transform.position - Vector3.forward * hit.distance, transform.lossyScale * 10);
+
+            arkaMesafe = 991;    
+
+        } 
+        if (Physics.BoxCast(transform.position, transform.lossyScale * 5, Vector3.forward, out hit, Quaternion.identity, maxDistance))
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawRay(transform.position, Vector3.forward * hit.distance);
+            Gizmos.DrawWireCube(transform.position + Vector3.forward * hit.distance, transform.lossyScale * 10);
+
+            onMesafe = hit.distance;
+        }
+        else
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawRay(transform.position, Vector3.forward * maxDistance);
+            Gizmos.DrawWireCube(transform.position + Vector3.forward * hit.distance, transform.lossyScale * 10);
+
+            onMesafe = 992;
+;
+        }
+        if (Physics.BoxCast(transform.position, transform.lossyScale * 5, Vector3.right, out hit, Quaternion.identity, maxDistance))
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawRay(transform.position, Vector3.right * hit.distance);
+            Gizmos.DrawWireCube(transform.position + Vector3.right * hit.distance, transform.lossyScale * 10);
+
+            sagMesafe = hit.distance;
+        }
+        else
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawRay(transform.position, Vector3.right * maxDistance);
+            Gizmos.DrawWireCube(transform.position + Vector3.right * hit.distance, transform.lossyScale * 10);
+
+            sagMesafe = 995;
+        }
+        if (Physics.BoxCast(transform.position, transform.lossyScale * 5, -Vector3.right, out hit, Quaternion.identity, maxDistance))
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawRay(transform.position, -Vector3.right * hit.distance);
+            Gizmos.DrawWireCube(transform.position - Vector3.right * hit.distance, transform.lossyScale * 10);
+
+            solMesafe = hit.distance;
+        }
+        else
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawRay(transform.position, -Vector3.right * maxDistance);
+            Gizmos.DrawWireCube(transform.position - Vector3.right * hit.distance, transform.lossyScale * 10);
+
+            solMesafe = 996;
+        }
+        if (Physics.BoxCast(transform.position, transform.lossyScale * 5, Vector3.up, out hit, Quaternion.identity, maxDistance))
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawRay(transform.position, Vector3.up * hit.distance);
+            Gizmos.DrawWireCube(transform.position + Vector3.up * hit.distance, transform.lossyScale * 10);
+
+            yukariMesafe = hit.distance;
+        }
+        else
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawRay(transform.position, Vector3.up * maxDistance);
+            Gizmos.DrawWireCube(transform.position + Vector3.up * hit.distance, transform.lossyScale * 10);
+
+            yukariMesafe = 994;
+        }
+        if (Physics.BoxCast(transform.position, transform.lossyScale * 5, -Vector3.up, out hit, Quaternion.identity, maxDistance))
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawRay(transform.position, -Vector3.up * hit.distance);
+            Gizmos.DrawWireCube(transform.position - Vector3.up * hit.distance, transform.lossyScale * 10);
+
+            asagiMesafe = hit.distance;
+        }
+        else
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawRay(transform.position, -Vector3.up * maxDistance);
+            Gizmos.DrawWireCube(transform.position - Vector3.up * hit.distance, transform.lossyScale * 10);
+
+            asagiMesafe = 993;
+        }
+
+
+
+        arkaMesafeText.text = "arka: " + arkaMesafe.ToString("F2");
+        onMesafeText.text = "on: " + onMesafe.ToString("F2");
+        sagMesafeText.text = "sag: " + sagMesafe.ToString("F2");
+        solMesafeText.text = "sol: " + solMesafe.ToString("F2");
+        yukariMesafeText.text = "yukari: " + yukariMesafe.ToString("F2");
+        asagiMesafeText.text = "asagi: " + asagiMesafe.ToString("F2");
+        
+
+
+
+
+
+
+        /*
+// Düzgün çalışmıyo
+        mesafeler = new float[6]{arkaMesafe, onMesafe, sagMesafe, solMesafe, yukariMesafe, asagiMesafe};   ////// bunun tama anlayamadım başka  bir şekilde bulsam daha iyi olur... Aslında en alttaki güzel fakat en büyük takılı kalıyor ona birtane daha bir değişken gibi bir şey aaralrsam olur belki
+        
+        
+        
+        if (arkaMesafe < onMesafe && arkaMesafe < sagMesafe && sagMesafe < solMesafe && solMesafe < yukariMesafe && yukariMesafe < asagiMesafe)
+            enKucuk = arkaMesafe;
+        else if (onMesafe < sagMesafe && sagMesafe < solMesafe && solMesafe < yukariMesafe && yukariMesafe < asagiMesafe)
+            enKucuk = onMesafe;
+        else if (sagMesafe < solMesafe && solMesafe < yukariMesafe && yukariMesafe < asagiMesafe)
+            enKucuk = sagMesafe;
+        else if (solMesafe < yukariMesafe && yukariMesafe < asagiMesafe)
+            enKucuk = solMesafe;
+        else if (yukariMesafe < asagiMesafe)
+            enKucuk = yukariMesafe;
+        else
+            enKucuk = asagiMesafe;
+
+        enKucukText.text = "En buyuk: " + "ve " + enKucuk.ToString("F2") + "Metre";
+        */
+        
+
+        /*
+        mesafeler = new float[6]{arkaMesafe, onMesafe, sagMesafe, solMesafe, yukariMesafe, asagiMesafe};
+        for (int i = 1; i < mesafeler.Length; i++)
+        {
+             if (mesafeler[i] < enKucuk)
+                 enKucuk = mesafeler[i];
+        }
+        enKucukText.text = "En buyuk: " + "ve " + enKucuk.ToString("F2") + "Metre";
+        */
+   
+    }
+    #endregion
+    
+    
+}
