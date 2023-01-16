@@ -2,7 +2,7 @@ for x in range(0, 1000):
     # Veritabanından ilgili bilgileri alma START
     import pymongo
     import time 
-    time.sleep(10)
+    time.sleep(0)
     myclient = pymongo.MongoClient(
     "mongodb+srv://deniz:727302dk@cluster0.zuwnt7e.mongodb.net/?retryWrites=true&w=majority")
     mydb = myclient["test"]
@@ -47,7 +47,7 @@ for x in range(0, 1000):
     for i in range(0, 4):
         if (IKAs[i]["status"] == "1"):
             aktifIKA += 1
-    # Aktif AGENT SAYISI BULMA END
+# Aktif AGENT SAYISI BULMA END
     print("Araçlar tespit edildi")
     # İHA eş zamanlı kalkış START
     if x == 0:
@@ -59,7 +59,7 @@ for x in range(0, 1000):
     print("Güncel veriler alındı.")
   # Veritabanından ilgili bilgileri alma END
 
-    landing = "not"
+    landing = "ok"
     engel = "yok"
 
    # Rotasyon yapma eğer engel varsa START
@@ -142,7 +142,7 @@ for x in range(0, 1000):
         IHAs[0]["s_z"] += 10
 
         # Formasyon ve navigasyon yaptırma  START
-        formasyon = "2"
+        formasyon = "1"
         if (formasyon == "1"):
             print("Okçunun Oku Formasyonu Etkin")
             # Okçunun Oku Formasyon yaptırma START
@@ -208,6 +208,7 @@ for x in range(0, 1000):
             IKAs[i]["s_x"] = IKAs[i]["l_x"]
             IKAs[i]["s_y"] = IKAs[i]["l_y"]
             IKAs[i]["s_z"] = IKAs[i]["l_z"]
+        print("iniş yaptı.")    
 
         # Verileri gönderme START
     myclient = pymongo.MongoClient(
