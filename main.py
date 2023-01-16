@@ -136,7 +136,7 @@ for x in range(0, 1000):
     if engel == "yok":
      if (landing == "not"):
         # Navigasyon formasyon döngüsü START
-        print("Araçlar navigasyon halinde.")
+        print("Araçlar navigasyon halinde.") 
 
         # Bu kısımda hangi yöne gideceklerse o yönde ilerlemelerini sağlıyoruz sürünün.
         IHAs[0]["s_z"] += 10
