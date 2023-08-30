@@ -1,41 +1,23 @@
 import './App.css';
 import { useState } from 'react';
-
+import {useNavigate} from 'react-router-dom'; 
 function Sayıgirme() {
 
   const [formData, setFormData] = useState({
-    IHASAYISI: 'IHA Sayısı Giriniz',
-    IKASAYISI: 'IKA Sayısı Giriniz',
+    
     
   })
-
-  const onChangeHandler = (event) => {
-
-    console.log(event)
-    if (event.target.name === 'languages') {
-
-      let copy = { ...formData }
-
-      if (event.target.checked) {
-        copy.languages.push(event.target.value)
-      } else {
-        copy.languages = copy.languages.filter(el => el !== event.target.value)
-      }
-
-      setFormData(copy)
-
-    } else {
-      setFormData(() => ({
-        ...formData,
-        [event.target.name]: event.target.value
-      }))
-    }
-  }
-
-  const onSubmitHandler = (event) => {
-    event.preventDefault()
-    console.log(formData)
-  }
+const onChangeHandler = (event) => {
+       setFormData(() => ({
+     ...formData,
+     [event.target.name]: event.target.value
+   }))
+ }
+ const onSubmitHandler = (event) => {
+ event.preventDefault()
+ console.log(formData)
+}
+const navigate = useNavigate();
   return (
     <div className="App">
       <form onSubmit={onSubmitHandler}>
@@ -51,7 +33,7 @@ function Sayıgirme() {
         
         
         <div className="form-group">
-          <button className="btn" type="submit" class="btn " >Veriyi Gönder</button>
+          <button className="btn "onClick={() => navigate("/")} type="submit" >Veriyi Gönder</button>
         </div>
       </form>
     </div>

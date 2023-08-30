@@ -2,27 +2,19 @@ import './App.css';
 import { useState } from 'react';
 import {useNavigate} from 'react-router-dom'; 
 
-function App() {
+function Yangın() {
 
   const [formData, setFormData] = useState({
-    yangınx: 'X değerini giriniz',
-    yangıny: 'Y değerini giriniz',
-    yangınz: 'Z değerini giriniz'
     
-   
-  })
-
+    
+     })
   const onChangeHandler = (event) => {
-
-    
-      setFormData(() => ({
+          setFormData(() => ({
         ...formData,
         [event.target.name]: event.target.value
       }))
     }
-  
-
-  const onSubmitHandler = (event) => {
+    const onSubmitHandler = (event) => {
     event.preventDefault()
     console.log(formData)
   }
@@ -54,4 +46,4 @@ function App() {
   );
 }
 
-export default App;
+export default Yangın;

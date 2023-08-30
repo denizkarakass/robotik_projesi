@@ -10,6 +10,10 @@ const IHKAList = (props) => {
                                  <p className="card-text">{IHKA.konumx}</p>
                                  <p className="card-text">{IHKA.konumy}</p>
                                  <p className="card-text">{IHKA.konumz}</p>
+                                 <h5 className="card-title">{IHKA.name}</h5>
+                                 <p className="card-text">{IHKA.konumx}</p>
+                                 <p className="card-text">{IHKA.konumy}</p>
+                                 <p className="card-text">{IHKA.konumz}</p>
                                  <div className="d-flex justify-content-between align-items-center">
                                     <button type="button" onClick={(event) => props.deleteIHKAProp(IHKA)} className="btn btn-md btn-outline-danger">Delete</button>
                                 </div>
@@ -21,6 +25,7 @@ const IHKAList = (props) => {
 
             </div>
         )
+        
 }
 
 export default IHKAList;

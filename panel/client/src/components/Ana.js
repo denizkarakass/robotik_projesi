@@ -34,7 +34,7 @@ class App extends React.Component {
     }
     //ADD IHKA
     addIHKA = async (IHKA) => {
-        await axios.post(`http://localhost:3002/IHKAs`, IHKA)
+        await axios.post(`http://localhost:3002/IHKAs`,IHKA)
         console.log(IHKA)
         this.setState(state => ({
             IHKAs:state.IHKAs.concat([IHKA])
